@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:title="MP3 Player"
+            app:navigationIcon="@drawable/ic_baseline_menu_24"
+            android:backgroundTint="#FFFFFF"
+            app:titleCentered="true">
+        </com.google.android.material.appbar.MaterialToolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardview1"
+        android:layout_width="match_parent"
+        android:layout_height="480dp"
+        android:background="#6dff31"
+        app:layout_constraintTop_toBottomOf="@+id/appbar">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/music"
+            android:adjustViewBounds="true">
+        </ImageView>
+
+    </com.google.android.material.card.MaterialCardView>
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardview2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/cardview1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="Dosti Music Video"
+                android:textSize="20sp"
+                android:textStyle="bold"/>
+
+            <SeekBar
+                android:layout_width="match_parent"
+                android:layout_height="43dp"
+                android:paddingTop="10dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:max="100"
+                android:min="0"/>
+
+            <LinearLayout
+                android:id="@+id/button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/shufflebutton"
+                   android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    app:borderWidth="0dp"
+                    android:elevation="50dp"
+                    android:tint="@color/white"
+                    app:srcCompat="@drawable/ic_baseline_shuffle_24"
+                    android:backgroundTint="#bb8f00"
+                    android:contentDescription="Shufflebutton"/>
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/backbutton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    app:borderWidth="0dp"
+                    android:elevation="50dp"
+                    android:tint="@color/white"
+                    app:srcCompat="@drawable/ic_baseline_fast_rewind_24"
+                    android:backgroundTint="#df6020"
+                    android:layout_marginStart="10dp"
+                    android:contentDescription="rewind button"/>
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/playbutton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    app:borderWidth="0dp"
+                    android:elevation="50dp"
+                    android:tint="@color/white"
+                    app:srcCompat="@drawable/ic_baseline_play_arrow_24"
+                    android:backgroundTint="#df6001"
+                    android:layout_marginStart="10dp"
+                    android:contentDescription="play button"/>
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/forwardbutton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    app:borderWidth="0dp"
+                    android:elevation="50dp"
+                    android:tint="@color/white"
+                    app:srcCompat="@drawable/ic_baseline_fast_forward_24"
+                    android:backgroundTint="#df6020"
+                    android:layout_marginStart="10dp"
+                    android:contentDescription="forward"/>
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/stopbutton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    app:borderWidth="0dp"
+                    android:elevation="50dp"
+                    android:tint="@color/white"
+                    app:srcCompat="@drawable/ic_baseline_stop_24"
+                    android:backgroundTint="#bb8f00"
+                    android:layout_marginStart="10dp"
+                    android:contentDescription="stop button"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
